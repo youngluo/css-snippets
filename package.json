@@ -1,0 +1,23 @@
+{
+  "name": "css-snippets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngluo/css-snippets.git"
+  },
+  "author": "Young Luo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngluo/css-snippets/issues"
+  },
+  "homepage": "https://github.com/youngluo/css-snippets#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eagle": "^2.1.0"
+  }
+}
