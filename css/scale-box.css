@@ -1,0 +1,14 @@
+.scale-box-wrapper {
+  position: relative;
+  width: 20%;
+  padding-top: 20%;
+  border: 1px solid #bbb;
+}
+
+.scale-box-wrapper .scale-box-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

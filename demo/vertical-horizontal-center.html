@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>垂直居中示例</title>
+    <link rel="stylesheet" href="../css/vertical-horizontal-center.css">
+    <link rel="stylesheet" href="../css/clearfix.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .content {
+            padding: 1%;
+            list-style: none;
+        }
+
+        .content li {
+            position: relative;
+            float: left;
+            width: 32%;
+            height: 280px;
+            margin-left: 1%;
+            margin-top: 10px;
+            border: 1px solid #bbb;
+            background-color: #fff;
+        }
+
+        .content li:nth-child(3n-2) {
+            margin-left: 0;
+        }
+
+        .content li h3 {
+            display: inline-block;
+            padding: 5px;
+            font-size: 14px;
+            color: #333;
+            border: 1px dashed rgba(0, 0, 0, .35);
+            border-radius: 1px;
+        }
+
+        @media (max-width: 767px) {
+            .content li {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .content li:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="content clearfix">
+        <li>
+            <h3 class="vertical-horizontal-center-transform">宽高不定（transform）</h3>
+        </li>
+        <li>
+            <div class="vertical-horizontal-center-table-wrapper wrapper">
+                <div class="vertical-horizontal-center-table">
+                    <h3>宽高不定（display:table）</h3>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="vertical-horizontal-center-flex wrapper">
+                <h3>宽高不定（flex）</h3>
+            </div>
+        </li>
+        <li>
+            <div class="vertical-horizontal-center-after-wrapper wrapper">
+                <h3 class="vertical-horizontal-center-after">宽高不定（伪元素）</h3>
+            </div>
+        </li>
+        <li>
+            <h3 class="vertical-horizontal-center-margin">宽高固定260 x 60（margin负值）</h3>
+        </li>
+        <li>
+            <h3 class="vertical-horizontal-center-margin-auto">宽高固定260 x 60（margin:auto）</h3>
+        </li>
+    </ul>
+</body>
+
+</html>

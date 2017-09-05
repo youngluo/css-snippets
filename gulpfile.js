@@ -4,5 +4,12 @@ Eagle.config.buildPath = 'css'
 Eagle.config.sourcemaps = false;
 
 Eagle(function (mix) {
-    mix.sass('./scss/*.scss')
+    mix
+        .sass('./scss/*.scss')
+        .browserSync({
+            server: {
+                baseDir: './',
+                directory: true
+            }
+        })
 })
