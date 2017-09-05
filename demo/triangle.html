@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS三角形</title>
+  <link rel="stylesheet" href="../css/triangle.css">
+  <link rel="stylesheet" href="../css/clearfix.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      float: left;
+      width: 25%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      li {
+        float: none;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    li div {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="clearfix">
+    <li>
+      <div class="triangle-up"></div>
+    </li>
+    <li>
+      <div class="triangle-down"></div>
+    </li>
+    <li>
+      <div class="triangle-left"></div>
+    </li>
+    <li>
+      <div class="triangle-right"></div>
+    </li>
+  </ul>
+</body>
+
+</html>

@@ -1,59 +1,59 @@
 // 宽高不定
 .vertical-horizontal-center-transform {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .vertical-horizontal-center-table-wrapper {
-    display: table;
-    .vertical-horizontal-center-table {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
+  display: table;
+  .vertical-horizontal-center-table {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
 }
 
 .vertical-horizontal-center-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .vertical-horizontal-center-after-wrapper {
-    text-align: center;
-    &:after {
-        content: '';
-        display: inline-block;
-        width: 0;
-        height: 100%;
-        vertical-align: middle;
-    }
-    .vertical-horizontal-center-after {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  text-align: center;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .vertical-horizontal-center-after {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 // 宽高固定
 .vertical-horizontal-center-margin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 260px;
-    height: 60px;
-    margin-top: -30px;
-    margin-left: -130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -130px;
 }
 
 .vertical-horizontal-center-margin-auto {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 260px;
-    height: 60px;
-    margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 260px;
+  height: 60px;
+  margin: auto;
 }

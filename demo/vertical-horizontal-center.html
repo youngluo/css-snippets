@@ -20,12 +20,12 @@
             background-color: #f8f8f8;
         }
 
-        .content {
+        .main {
             padding: 1%;
             list-style: none;
         }
 
-        .content li {
+        .main li {
             position: relative;
             float: left;
             width: 32%;
@@ -36,11 +36,11 @@
             background-color: #fff;
         }
 
-        .content li:nth-child(3n-2) {
+        .main li:nth-child(3n-2) {
             margin-left: 0;
         }
 
-        .content li h3 {
+        .main li h3 {
             display: inline-block;
             padding: 5px;
             font-size: 14px;
@@ -50,14 +50,14 @@
         }
 
         @media (max-width: 767px) {
-            .content li {
+            .main li {
                 float: none;
                 width: 100%;
                 margin-left: 0;
                 margin-top: 10px;
             }
 
-            .content li:first-child {
+            .main li:first-child {
                 margin-top: 0;
             }
         }
@@ -70,7 +70,7 @@
 </head>
 
 <body>
-    <ul class="content clearfix">
+    <ul class="main clearfix">
         <li>
             <h3 class="vertical-horizontal-center-transform">宽高不定（transform）</h3>
         </li>

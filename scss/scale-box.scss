@@ -1,14 +1,14 @@
 // 利用padding-top撑开盒子，可通过width和padding-top调整任意比例
 .scale-box-wrapper {
-    position: relative;
-    width: 20%;
-    padding-top: 20%; // padding-top是根据父元素的宽度计算的
-    border: 1px solid #bbb;
-    .scale-box-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
+  position: relative;
+  width: 20%;
+  padding-top: 20%; // padding-top是根据父元素的宽度计算的
+  border: 1px solid #bbb;
+  .scale-box-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 }

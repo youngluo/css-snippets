@@ -34,7 +34,7 @@
 }
 
 .vertical-horizontal-center-after-wrapper:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 0;
   height: 100%;

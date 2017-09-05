@@ -1,0 +1,31 @@
+@mixin triangle($direction, $size:50px, $borderColor:#0dbc79) {
+    width: 0;
+    height: 0;
+    @if $direction==up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size*2 solid $borderColor;
+    }
+    @else if $direction==down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size*2 solid $borderColor;
+    }
+    @else if $direction==left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size*2 solid $borderColor;
+    }
+    @else if $direction==right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size*2 solid $borderColor;
+    }
+}
+
+$types: ("up", "down", "left", "right");
+@each $direction in $types {
+    .triangle-#{$direction} {
+        @include triangle($direction);
+    }
+}
