@@ -1,0 +1,84 @@
+.left-column-fixed-float .left {
+  float: left;
+  width: 100px;
+}
+
+.left-column-fixed-float .right {
+  margin-left: 110px;
+}
+
+.left-column-fixed-table {
+  display: table;
+  width: 100%;
+}
+
+.left-column-fixed-table .left {
+  display: table-cell;
+  width: 100px;
+}
+
+.left-column-fixed-table .right {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.left-column-fixed-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+
+.left-column-fixed-flex .left {
+  width: 100px;
+}
+
+.left-column-fixed-flex .right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.equal-height-margin {
+  overflow: hidden;
+}
+
+.equal-height-margin .left,
+.equal-height-margin .right {
+  float: left;
+  width: 50%;
+  padding-bottom: 2000px;
+  margin-bottom: -2000px;
+}
+
+.equal-height-table {
+  display: table;
+  width: 100%;
+}
+
+.equal-height-table .left,
+.equal-height-table .right {
+  display: table-cell;
+  width: 50%;
+}
+
+.equal-height-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+
+.equal-height-flex .left,
+.equal-height-flex .right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}

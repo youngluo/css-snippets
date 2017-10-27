@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/column.css">
+  <title>column布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    li {
+      list-style: none;
+      float: left;
+      width: 50%;
+      padding: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 10px;
+    }
+
+    .item {
+      border: solid 1px #bbb;
+      margin-top: 20px;
+    }
+
+    .item .left {
+      background-color: #ddd;
+    }
+
+    .item .right {
+      background-color: rgb(170, 169, 169);
+    }
+
+    @media (max-width: 767px) {
+      li {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li>
+      <h2>左边栏宽度固定，右边栏自动填满剩余空间</h2>
+      <h3>float + BFC实现</h3>
+      <div class="left-column-fixed-float item">
+        <div class="left">左边100px</div>
+        <div class="right">
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+        </div>
+      </div>
+      <h3>display:table</h3>
+      <div class="left-column-fixed-table item">
+        <div class="left">左边100px</div>
+        <div class="right">
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+        </div>
+      </div>
+      <h3>flex实现</h3>
+      <div class="left-column-fixed-flex item">
+        <div class="left">左边100px</div>
+        <div class="right">
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+          <p>右边自适应</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <h2>两栏自适应等高布局</h2>
+      <h3>margin负值</h3>
+      <div class="equal-height-margin item">
+        <div class="left">左边</div>
+        <div class="right">
+          <p>右边</p>
+          <p>右边</p>
+          <p>右边</p>
+          <p>右边</p>
+        </div>
+      </div>
+      <h3>display:table</h3>
+      <div class="equal-height-table item">
+        <div class="left">左边</div>
+        <div class="right">
+          <p>右边</p>
+          <p>右边</p>
+          <p>右边</p>
+          <p>右边</p>
+        </div>
+      </div>
+      <h3>flex实现</h3>
+      <div class="equal-height-flex item">
+        <div class="left">左边</div>
+        <div class="right">
+          <p>右边</p>
+          <p>右边</p>
+          <p>右边</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</body>
+
+</html>

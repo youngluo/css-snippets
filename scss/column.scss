@@ -1,0 +1,65 @@
+.left-column-fixed-float {
+    .left {
+        float: left;
+        width: 100px;
+    }
+    .right {
+        margin-left: 110px;
+    }
+}
+
+.left-column-fixed-table {
+    display: table;
+    width: 100%;
+    .left {
+        display: table-cell;
+        width: 100px;
+    }
+    .right {
+        display: table-cell;
+        padding-left: 10px;
+    }
+}
+
+.left-column-fixed-flex {
+    display: flex;
+    flex-flow: row;
+    .left {
+        width: 100px;
+    }
+    .right {
+        flex: 1;
+        margin-left: 10px;
+    }
+}
+
+.equal-height-margin {
+    $padding: 2000px; // 足够大
+    overflow: hidden;
+    .left,
+    .right {
+        float: left;
+        width: 50%;
+        padding-bottom: $padding;
+        margin-bottom: -$padding;
+    }
+}
+
+.equal-height-table {
+    display: table;
+    width: 100%;
+    .left,
+    .right {
+        display: table-cell;
+        width: 50%;
+    }
+}
+
+.equal-height-flex {
+    display: flex;
+    flex-flow: row;
+    .left,
+    .right {
+        flex: 1;
+    }
+}
