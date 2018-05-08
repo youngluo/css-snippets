@@ -1,0 +1,54 @@
+$gutter: 0;
+$backgroundColor: #00D084;
+$activeColor: #7BDCB5;
+%triangle {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 16.666666vw solid transparent;
+  border-bottom: 16.666666vw solid transparent;
+}
+
+.hexagon {
+  display: flex;
+  width: 100%;
+  padding-top: 16.666666vw;
+  &-column {
+    flex: 1;
+    padding-left: $gutter;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:nth-child(2) {
+      margin-top: -16.666666vw;
+    }
+    &-item {
+      position: relative;
+      width: 50%;
+      margin: 35px 0 0 25%;
+      padding-top: 100%;
+      background: $backgroundColor;
+      &:active {
+        background-color: $activeColor;
+        &::before {
+          border-right-color: $activeColor;
+        }
+        &::after {
+          border-left-color: $activeColor;
+        }
+      }
+      &::before {
+        @extend %triangle;
+        right: 100%;
+        border-right: 8.333333vw solid $backgroundColor;
+      }
+      &::after {
+        @extend %triangle;
+        left: 100%;
+        border-left: 8.333333vw solid $backgroundColor;
+      }
+    }
+  }
+}

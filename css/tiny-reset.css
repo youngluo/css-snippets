@@ -1,0 +1,71 @@
+html {
+  line-height: 1;
+}
+
+body,
+div,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+blockquote,
+figure,
+fieldset,
+legend,
+menu,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  box-sizing: border-box;
+}
+
+ul,
+menu {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea,
+iframe,
+img {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+  line-height: inherit;
+  box-sizing: border-box;
+}
