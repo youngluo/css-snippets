@@ -1,13 +1,49 @@
+.hexagon-item-container-before,
+.hexagon-item-container-after {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+
+.hexagon-item-container-before::before,
+.hexagon-item-container-after::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 866px solid transparent;
+  border-bottom: 866px solid transparent;
+}
+
 .hexagon {
   width: 100%;
-  padding-top: 16.666666vw;
+  padding-top: 14.4333333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hexagon-wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.hexagon-wrapper:nth-child(2n) {
+  margin-top: -14.4333333333%;
 }
 
 .hexagon-item {
   position: relative;
-  float: left;
-  width: 33.333333%;
-  padding-top: 28.866667%;
+  width: 100%;
+  margin-bottom: 25%;
+  padding-top: 86.6%;
 }
 
 .hexagon-item-container {
@@ -21,23 +57,21 @@
   left: 0;
 }
 
-.hexagon-item-container-before {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  overflow: hidden;
+.hexagon-item-container:active .hexagon-item-container-content {
+  background-color: #7BDCB5;
+}
+
+.hexagon-item-container:active .hexagon-item-container-before::before {
+  border-right-color: #7BDCB5;
+}
+
+.hexagon-item-container:active .hexagon-item-container-after::before {
+  border-left-color: #7BDCB5;
 }
 
 .hexagon-item-container-before::before {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  border-top: 519.6px solid transparent;
-  border-bottom: 519.6px solid transparent;
-  border-right: 300px solid #249ff1;
-  margin-right: -519.6px;
-  margin-top: -300px;
+  border-right: 500px solid #00D084;
+  left: 0;
 }
 
 .hexagon-item-container-content {
@@ -47,8 +81,7 @@
   background: #00D084;
 }
 
-.hexagon-item-container-after {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.hexagon-item-container-after::before {
+  border-left: 500px solid #00D084;
+  right: 0;
 }

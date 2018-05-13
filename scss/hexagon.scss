@@ -1,23 +1,42 @@
 $backgroundColor: #00D084;
 $activeColor: #7BDCB5;
+$triangle-height: 500px; // 两侧三角形的高，足够大
+$triangle-half-bottom: $triangle-height * 1.732; //两侧三角形二分之一底，底与高比为 (2 * √3) : 1
+%triangle-container {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
 %triangle {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-top: calc(50% * 1.732) solid transparent;
-  border-bottom: calc(50% * 1.732) solid transparent;
+  border-top: $triangle-half-bottom solid transparent;
+  border-bottom: $triangle-half-bottom solid transparent;
 }
 
 .hexagon {
+  $padding-top: 100% / 3 / 2 * 1.732 / 2;
   width: 100%;
-  padding-top: 16.666666vw;
+  padding-top: $padding-top;
+  display: flex;
+  &-wrapper {
+    flex: 1;
+    &:nth-child(2n) {
+      margin-top: -$padding-top;
+    }
+  }
   &-item {
+    $a: 100% / 2; // 正六边形边长
+    $height: $a * 1.732; // 正六边形边高
     position: relative;
-    float: left;
-    width: 33.333333%;
-    padding-top: 28.866667%; // width / 2 * √3
+    width: 100%;
+    margin-bottom: $a / 2;
+    padding-top: $height;
     &-container {
       display: flex;
       position: absolute;
@@ -25,21 +44,25 @@ $activeColor: #7BDCB5;
       right: 0;
       bottom: 0;
       left: 0;
-      &-before {
-        flex: 1;
-        overflow: hidden;
+      &:active &-content {
+        background-color: $activeColor;
+      }
+      &:active &-before {
         &::before {
-          $height: 300px; // 足够大
-          $bottom: $height * 1.732; //底与高比为 (2 * √3) : 1
-          content: '';
-          display: block;
-          width: 0;
-          height: 0;
-          border-top: $bottom solid transparent;
-          border-bottom: $bottom solid transparent;
-          border-right: $height solid #249ff1;
-          margin-right: -$bottom;
-          margin-top: -$height;
+          border-right-color: $activeColor;
+        }
+      }
+      &:active &-after {
+        &::before {
+          border-left-color: $activeColor;
+        }
+      }
+      &-before {
+        @extend %triangle-container;
+        &::before {
+          @extend %triangle;
+          border-right: $triangle-height solid $backgroundColor;
+          left: 0;
         }
       }
       &-content {
@@ -47,42 +70,13 @@ $activeColor: #7BDCB5;
         background: $backgroundColor;
       }
       &-after {
-        flex: 1;
+        @extend %triangle-container;
+        &::before {
+          @extend %triangle;
+          border-left: $triangle-height solid $backgroundColor;
+          right: 0;
+        }
       }
-    } // &:active {
-    //   background-color: $activeColor;
-    //   &::before {
-    //     border-right-color: $activeColor;
-    //   }
-    //   &::after {
-    //     border-left-color: $activeColor;
-    //   }
-    // }
-    // &::before {
-    //   // @extend %triangle;
-    //   // right: 100%;
-    //   // border-right: calc(50% * 1.732 / 2) solid $backgroundColor;
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   right: 100%;
-    //   width: 50%;
-    //   height: 100%;
-    //   background-color: #ccc;
-    //   &::before {
-    //     content: '';
-    //     display: block;
-    //     width: 0;
-    //     height: 0;
-    //     border-top: 500 * 2 * 1.732px solid transparent;
-    //     border-bottom: 500 * 2 * 1.732px solid transparent;
-    //     border-right: 500px solid $backgroundColor;
-    //   }
-    // }
-    // &::after {
-    //   @extend %triangle;
-    //   left: 100%;
-    //   border-left: calc(50% * 1.732 / 2) solid $backgroundColor;
-    // }
+    }
   }
 }
