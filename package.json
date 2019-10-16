@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "start": "gulp watch"
+    "start": "gulp watch",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
